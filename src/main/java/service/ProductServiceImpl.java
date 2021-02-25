@@ -43,9 +43,9 @@ public class ProductServiceImpl implements PService {
                 double price = resultSet.getDouble("price");
                 int quantity = resultSet.getInt("quantity");
                 String color = resultSet.getString("color");
-                int categoryId = resultSet.getInt("cate_id");
-                String categoryName = resultSet.getString("cate_name");
-                Category category1 = new Category(categoryId, categoryName);
+                int categoryId = resultSet.getInt("id_cate");
+//                String categoryName = resultSet.getString("cate_name");
+                Category category1 = new Category(categoryId);
                 list.add(new Product(id, nameproduct, price, quantity, color, category1));
             }
         } catch (SQLException throwables) {
